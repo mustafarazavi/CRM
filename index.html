@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>تعرفه‌های خدمات CRM (نسخه موبایل) — V3</title>
+  <title>تعرفه‌های خدمات CRM | راه‌اندازی و توسعه سیستم فروش</title>
   <meta name="description" content="تعرفه‌های راه‌اندازی و توسعه سیستم CRM: پلن‌های اقتصادی شروع کم‌ریسک و گام اول تغییر، پلن‌های استقرار و افزایش فروش (سیلزبان، فروش‌افزا، Sales Engine) با ساعت‌ها و سرمایه‌گذاری ماهانه.">
   <meta name="theme-color" content="#091220">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fa_IR">
-  <meta property="og:title" content="تعرفه‌های خدمات CRM (نسخه موبایل)">
+  <meta property="og:title" content="تعرفه‌های خدمات CRM | راه‌اندازی و توسعه سیستم فروش">
   <meta property="og:description" content="پلن‌های راه‌اندازی و توسعه سیستم مدیریت ارتباط با مشتریان (CRM) — از شروع کم‌ریسک تا موتور کامل توسعه فروش.">
   <meta name="twitter:card" content="summary">
   <style>
@@ -970,6 +970,12 @@
       border: 1.2px solid rgba(204, 164, 59, 0.5) !important;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
     }
+    /* اندازه آیکون ساعت — سطح بالا تا در چاپ هم SVG منفجر نشود */
+    .hours-badge .hours-icon {
+      width: 1.1em !important;
+      height: 1.1em !important;
+      flex: 0 0 auto;
+    }
 
     /* ۶. روبان ارزش‌محور (+ شامل تمامی امکانات پلن قبلی) */
     .included-ribbon {
@@ -1181,53 +1187,55 @@
       }
 
       /* ============================================================
-         ۱۵. درشت‌تر کردن فونت‌ها — تمام عرض‌های صفحه‌نمایش (با تأیید شما)
+         ۱۵. تایپوگرافی صفحه‌نمایش — متعادل‌شده
+         (ضریب vw و کف ~۱۲٪ کمتر شد؛ سقف = اندازه دسکتاپ دست‌نخورده،
+          پس در گوشی ریزتر و راحت‌تر خوانده می‌شود و دسکتاپ همان قبل است)
          ============================================================ */
-      .toolbar-title span { font-size: clamp(16px, 4.4vw, 19px); }
-      .print-btn { font-size: clamp(14px, 3.9vw, 16px); }
+      .toolbar-title span { font-size: clamp(14.5px, 3.9vw, 19px); }
+      .print-btn { font-size: clamp(13px, 3.5vw, 16px); }
 
-      .page-hero-title { font-size: clamp(19px, 5.4vw, 26px); }
-      .page-hero-sub { font-size: clamp(14.5px, 4.1vw, 18px); }
-      .overview-hero .page-hero-title { font-size: clamp(19px, 5.5vw, 27px); }
-      .overview-hero .page-hero-sub { font-size: clamp(15px, 4.3vw, 19px); }
-      .hero-corner-label { font-size: 13.5px; }
+      .page-hero-title { font-size: clamp(17px, 4.7vw, 26px); }
+      .page-hero-sub { font-size: clamp(13px, 3.6vw, 18px); }
+      .overview-hero .page-hero-title { font-size: clamp(17px, 4.8vw, 27px); }
+      .overview-hero .page-hero-sub { font-size: clamp(13.5px, 3.8vw, 19px); }
+      .hero-corner-label { font-size: 12.5px; }
 
-      .intro-card { font-size: clamp(16px, 4.5vw, 18.5px); }
-      .overview-divider-title { font-size: clamp(15.5px, 4.5vw, 19px); }
+      .intro-card { font-size: clamp(14.5px, 4vw, 18.5px); }
+      .overview-divider-title { font-size: clamp(14px, 4vw, 19px); }
 
-      .custom-table { font-size: clamp(15px, 4.2vw, 17.5px); }
-      .custom-table th { font-size: clamp(14px, 3.9vw, 16px); }
-      /* ستون قیمت در موبایل کمی پهن‌تر تا قرص‌های درشت‌تر جا شوند */
+      .custom-table { font-size: clamp(13.5px, 3.7vw, 17.5px); }
+      .custom-table th { font-size: clamp(12.5px, 3.4vw, 16px); }
+      /* ستون قیمت در موبایل کمی پهن‌تر تا قرص‌های قیمت جا شوند */
       .custom-table th:nth-child(1), .custom-table td:nth-child(1) { width: 37%; }
       .custom-table th:nth-child(3), .custom-table td:nth-child(3) { width: 40%; }
-      .price-pill-table { font-size: clamp(15px, 4.2vw, 17.5px); }
-      .price-pill-table--highlight { font-size: clamp(15.5px, 4.3vw, 18px); }
-      .table-note { font-size: clamp(13px, 3.6vw, 14.5px); }
+      .price-pill-table { font-size: clamp(13.5px, 3.7vw, 17.5px); }
+      .price-pill-table--highlight { font-size: clamp(14px, 3.8vw, 18px); }
+      .table-note { font-size: clamp(11.5px, 3.2vw, 14.5px); }
 
-      .card-duration-pill { font-size: clamp(17px, 4.7vw, 21px); }
-      .plan-title { font-size: clamp(19.5px, 5.3vw, 24px); }
-      .hours-badge { font-size: clamp(14px, 3.9vw, 16.5px); }
+      .card-duration-pill { font-size: clamp(15px, 4.1vw, 21px); }
+      .plan-title { font-size: clamp(17px, 4.6vw, 24px); }
+      .hours-badge { font-size: clamp(12.5px, 3.4vw, 16.5px); }
 
-      .price-label { font-size: clamp(13px, 3.6vw, 15px); }
-      .price-number { font-size: clamp(33px, 9.2vw, 45px); }
-      .starter-price-box .price-number { font-size: clamp(28px, 7.7vw, 34px); }
-      .price-unit { font-size: clamp(14px, 3.9vw, 16px); }
-      .price-badge-roi { font-size: clamp(12px, 3.2vw, 14px); }
-      .included-ribbon { font-size: clamp(16.5px, 4.7vw, 20px); }
+      .price-label { font-size: clamp(11.5px, 3.2vw, 15px); }
+      .price-number { font-size: clamp(29px, 8vw, 45px); }
+      .starter-price-box .price-number { font-size: clamp(25px, 6.8vw, 34px); }
+      .price-unit { font-size: clamp(12.5px, 3.4vw, 16px); }
+      .price-badge-roi { font-size: clamp(11px, 2.8vw, 14px); }
+      .included-ribbon { font-size: clamp(14.5px, 4.1vw, 20px); }
 
-      .feature-item { font-size: clamp(16px, 4.4vw, 18px); }
-      .result-title { font-size: clamp(16.5px, 4.7vw, 19.5px); }
-      .result-items { font-size: clamp(15px, 4.4vw, 17.5px); }
+      .feature-item { font-size: clamp(14px, 3.9vw, 18px); }
+      .result-title { font-size: clamp(14.5px, 4.1vw, 19.5px); }
+      .result-items { font-size: clamp(13.5px, 3.9vw, 17.5px); }
 
-      .module-title { font-size: clamp(16.5px, 4.6vw, 19px); }
-      .module-items { font-size: clamp(14px, 3.8vw, 16px); }
+      .module-title { font-size: clamp(14.5px, 4vw, 19px); }
+      .module-items { font-size: clamp(12.5px, 3.4vw, 16px); }
 
-      .contact-box { font-size: clamp(16px, 4.6vw, 19px); }
-      .contact-phone { font-size: clamp(22px, 6.6vw, 30px); }
-      .contact-name { font-size: clamp(18px, 5.2vw, 21.5px); }
+      .contact-box { font-size: clamp(14.5px, 4vw, 19px); }
+      .contact-phone { font-size: clamp(20px, 5.8vw, 30px); }
+      .contact-name { font-size: clamp(16px, 4.6vw, 21.5px); }
 
-      .starter-pill { font-size: clamp(14px, 3.9vw, 16px); }
-      .starter-sessions { font-size: clamp(15px, 4.2vw, 17px); }
+      .starter-pill { font-size: clamp(12.5px, 3.4vw, 16px); }
+      .starter-sessions { font-size: clamp(13.5px, 3.7vw, 17px); }
 
       /* ============================================================
          ۱۶. چیدمان بازاریابی (CRO)
@@ -1247,7 +1255,7 @@
         border: 1px solid rgba(255, 255, 255, 0.45);
         border-radius: 9999px;
         font-weight: 900;
-        font-size: clamp(14.5px, 4vw, 16.5px);
+        font-size: clamp(13.5px, 3.6vw, 16.5px);
         letter-spacing: -0.2px;
         text-decoration: none;
         box-shadow: 0 6px 16px rgba(245, 158, 11, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -1291,11 +1299,6 @@
         color: #8a6a14 !important;
         border-radius: 9999px !important;
         box-shadow: 0 1px 4px rgba(13, 27, 56, 0.08) !important;
-      }
-      .hours-badge .hours-icon {
-        width: 1.1em;
-        height: 1.1em;
-        flex: 0 0 auto;
       }
 
       /* ============================================================
@@ -1454,7 +1457,7 @@
       border: 1px solid rgba(255, 255, 255, 0.45);
       border-radius: 9999px;
       font-weight: 900;
-      font-size: clamp(14.5px, 4vw, 16px);
+      font-size: clamp(13.5px, 3.7vw, 16px);
       text-decoration: none;
       box-shadow: 0 8px 22px rgba(245, 158, 11, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.5);
     }
@@ -2019,7 +2022,7 @@
   <!-- نوار ابزار (فقط صفحه‌نمایش) -->
   <header class="toolbar">
     <div class="toolbar-title">
-      <span>📊 تعرفه‌های خدمات CRM <small style="opacity:.55;font-weight:600;">· V3</small></span>
+      <span>📊 تعرفه‌های خدمات CRM</span>
     </div>
     <button class="print-btn" type="button">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2516,7 +2519,7 @@
   </a>
 
   <script>
-    console.log('CRM pricing page — version V3, build 2026-11-15 (leaked print CSS fixed, mobile shadows softened)');
+    console.log('CRM pricing page — published build 2026-11-16');
     // دکمه چاپ: منتظر فونت می‌ماند اما حداکثر ۱.۵ ثانیه، تا gesture مرورگر (مخصوصاً iOS) منقضی نشود.
     const printButton = document.querySelector('.print-btn');
     printButton.addEventListener('click', async () => {
